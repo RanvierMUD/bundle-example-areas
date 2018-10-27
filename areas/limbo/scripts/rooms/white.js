@@ -1,16 +1,14 @@
 'use strict';
 
-module.exports = (srcPath) => {
-  const Broadcast = require(srcPath + 'Broadcast');
+const { Broadcast } = require('ranvier');
 
-  return  {
-    listeners: {
-      playerEnter: state => function (player) {
-        const quest = state.QuestFactory.create(state, 'limbo:journeybegins', player);
-        if (player.questTracker.canStart(quest)) {
-          player.questTracker.start(quest);
-        }
+module.exports = {
+  listeners: {
+    playerEnter: state => function (player) {
+      const quest = state.QuestFactory.create(state, 'limbo:journeybegins', player);
+      if (player.questTracker.canStart(quest)) {
+        player.questTracker.start(quest);
       }
     }
-  };
+  }
 };
