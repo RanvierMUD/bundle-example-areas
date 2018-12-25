@@ -1,3 +1,4 @@
 title: "Limbo"
-info:
-  respawnInterval: 30
+behaviors:
+  progressive-respawn:
+    interval: 20
