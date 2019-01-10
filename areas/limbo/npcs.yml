@@ -19,7 +19,6 @@
   name: "Wise Old Man"
   level: 99
   script: 'old-man'
-  pacifist: true
   description: "A wise looking old man sits on the ground with legs crossed."
   behaviors:
     ranvier-sentient: true
@@ -27,7 +26,6 @@
   keywords: ["puppy", "dog", "loyal", "wide", "eyed", "wide-eyed"]
   name: A Puppy
   description: "A wide-eyed puppy stares up at you."
-  pacifist: true
   level: 1
   script: 'puppy'
 - id: trainingdummy
@@ -85,7 +83,6 @@
   description: >-
     Moe's Shop has the best wares in town! Armor, weapons and potions, you name and we ... might have it!
   level: 99
-  pacifist: true
   behaviors:
     ranvier-sentient: true
     vendor:
