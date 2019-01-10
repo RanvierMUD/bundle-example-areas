@@ -7,7 +7,7 @@ module.exports = {
         return;
       }
 
-      const speak = state.EffectFactory.create('speak', this, {}, {
+      const speak = state.EffectFactory.create('speak', {}, {
         messageList: [
           "Welcome, %player%. The combat training area lies to the east.",
           "To the west lies Wally's shop where you can stock up on potions.",
