@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "bundle-example-areas",
+  "version": "1.0.0",
+  "description": "Example Ranvier areas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RanvierMUD/bundle-example-areas.git"
+  },
+  "author": "Shawn Biddle <shawncplus@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rando-js": "^0.2.0"
+  }
+}
