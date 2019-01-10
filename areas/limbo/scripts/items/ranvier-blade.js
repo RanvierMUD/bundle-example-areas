@@ -7,7 +7,7 @@ const { Broadcast, Heal, RandomUtil } = require('ranvier');
  */
 module.exports = {
   listeners: {
-    hit: state => function (damage, target) {
+    hit: state => function (damage, target, finalAmount) {
       if (!damage.attacker || damage.attacker.isNpc) {
         return;
       }
@@ -18,16 +18,11 @@ module.exports = {
       // its script
 
       if (RandomUtil.probability(50)) {
-        const amount = damage.critical ?
+        const amount = damage.metadata.critical ?
           damage.attacker.getMaxAttribute('health') :
-          Math.floor(damage.finalAmount / 4);
+          Math.floor(finalAmount / 4);
 
-        const heal = new Heal({
-          attribute: 'health',
-          amount,
-          source: this,
-          attacker: damage.attacker
-        });
+        const heal = new Heal('health', amount, damage.attacker, this);
 
         Broadcast.sayAt(damage.attacker, `<b><white>The Blade of Ranvier shines with a bright white light and you see wisps of ${target.name}'s soul flow into the blade.</white></b>`, 80);
         heal.commit(damage.attacker);
