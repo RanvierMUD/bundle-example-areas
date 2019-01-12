@@ -153,9 +153,9 @@
       direction: east
   doors:
     "limbo:ancientwayshrine":
-      lockedWith: false
+      locked: true
       closed: true
-- id: 11
+- id: locked
   title: "Locked room with key"
   description: This room requires a key to get into
   items:
