@@ -3,8 +3,9 @@
 module.exports = {
   listeners: {
     playerEnter: state => function (player) {
-      const quest = state.QuestFactory.create(state, 'limbo:selfdefense101', player);
-      if (player.questTracker.canStart(quest)) {
+      const questRef = 'limbo:selfdefense101';
+      if (state.QuestFactory.canStart(player, questRef)) {
+        const quest = state.QuestFactory.create(state, questRef, player);
         player.questTracker.start(quest);
       }
     }
