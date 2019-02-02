@@ -39,7 +39,7 @@
   roomDesc: "Scraps from a Training Dummy"
   keywords: [ "dummy", "scraps" ]
   description: "Splintered, shattered, and generally destroyed remains of a training dummy"
-  behaviors:
+  metadata:
     sellable:
       value: 5
       currency: gold
@@ -61,7 +61,6 @@
       strength: 2
       stamina: 2
       critical: -1
-  behaviors:
     sellable:
       value: 30
       currency: gold
@@ -78,7 +77,6 @@
     itemLevel: 1
     stats:
       armor: 20
-  behaviors:
     sellable:
       value: 30
       currency: gold
@@ -89,7 +87,6 @@
   type: POTION
   metadata:
     level: 1
-  behaviors:
     # usable has two variants: spell, and effect
     usable:
       # this is the spell variant, you specify a skill of type SPELL
@@ -111,7 +108,6 @@
   type: POTION
   metadata:
     level: 1
-  behaviors:
     usable:
       # this is the effect variant, you specify an effect name instead of a spell
       effect: "potion.buff"
@@ -159,7 +155,6 @@
     itemLevel: 1
     stats:
       armor: 10
-  behaviors:
     sellable:
       value: 30
       currency: gold

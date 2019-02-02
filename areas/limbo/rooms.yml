@@ -111,14 +111,12 @@
     - roomId: "limbo:training3"
       direction: south
 - id: ancientwayshrine
-  title: "Ancient Wayshrine (Waypoint)"
+  title: "Ancient Wayshrine"
   description: >
     A runed black obelisk towers in the center of this clearing, surrounded by a faerie ring. The runes pulse and glow with
     a soft blue light. The grass immediately around the obelisk is immaculate in stark contrast to the dying former meadow
-    that makes up the clearing. The obelisk looks like it can be used as a <b><cyan>waypoint</cyan></b>.
+    that makes up the clearing.
   script: 'ancientwayshrine'
-  behaviors:
-    waypoint: true
   exits:
     - roomId: "limbo:white"
       direction: up
@@ -142,7 +140,7 @@
   script: 'context'
   description: >-
     This room shows off commands that are only active in a particular room. Try out the <b><cyan>roomtest</cyan></b> command.
-  behaviors:
+  metadata:
     commands: [ 'roomtest' ]
   items:
     - id: "limbo:test_key"

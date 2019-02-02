@@ -20,8 +20,6 @@
   level: 99
   script: 'old-man'
   description: "A wise looking old man sits on the ground with legs crossed."
-  behaviors:
-    ranvier-sentient: true
 - id: puppy
   keywords: ["puppy", "dog", "loyal", "wide", "eyed", "wide-eyed"]
   name: A Puppy
@@ -83,8 +81,7 @@
   description: >-
     Moe's Shop has the best wares in town! Armor, weapons and potions, you name and we ... might have it!
   level: 99
-  behaviors:
-    ranvier-sentient: true
+  metadata:
     vendor:
       items:
         "limbo:trainingsword":

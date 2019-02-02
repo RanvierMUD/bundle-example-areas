@@ -4,11 +4,6 @@ const { Broadcast } = require('ranvier');
 
 module.exports = {
   listeners: {
-    playerEnter: state => function (player) {
-      Broadcast.sayAt(player);
-      Broadcast.sayAt(player, `<b><cyan>Hint: Waypoints allow you to travel vast distances. Save waypoints with '<white>waypoint save</white>', set your preferred home with '<white>waypoint home</white>. If you have enough energy you can return home at any time with '<white>recall</white>'.</cyan></b>`, 80);
-    },
-
     channelReceive: state => function (channel, sender, message) {
       if (channel.name !== 'say') {
         return;
