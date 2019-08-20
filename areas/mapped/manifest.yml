@@ -2,3 +2,4 @@
 title: Map Test
 info:
   respawnInterval: 60
+instanced: player
